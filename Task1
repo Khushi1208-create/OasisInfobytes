@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3498db; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            background-color: #77a8df; 
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff; 
+        }
+
+        .display {
+            background-color: #93b9df; 
+            border: 2px solid #8cb5d8; 
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            font-size: 28px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #fff; 
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            background-color: #9dcae9; 
+            border: none;
+            color: #fff; 
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #4b9cdb; 
+        }
+
+        .operator {
+            background-color: #e74c3c; 
+        }
+
+        .operator:hover {
+            background-color: #c0392b; 
+        }
+
+        .clear {
+            background-color: #2ecc71; 
+        }
+
+        .clear:hover {
+            background-color: #27ae60; 
+        }
+
+        .delete {
+            background-color: #9b59b6; 
+        }
+
+        .delete:hover {
+            background-color: #8e44ad; 
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button>
+            <button class="operator" onclick="appendOperator('*')">*</button>
+            <button onclick="appendDecimal()">.</button>
+            <button onclick="appendNumber(0)">0</button>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="calculate()">=</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+            <button class="operator" onclick="appendPercentage()">%</button>
+            <button class="operator" onclick="appendOperator('(')">(</button>
+            <button class="operator" onclick="appendOperator(')')">)</button>
+            <button class="operator" onclick="appendSqrt()">√</button>
+            <button class="delete" onclick="deleteLast()">DEL</button>
+        </div>
+    </div>
+
+    <script>
+        let displayValue = '0';
+
+        function updateDisplay() {
+            document.getElementById('display').innerText = displayValue;
+        }
+
+        function appendNumber(number) {
+            if (displayValue === '0') {
+                displayValue = '';
+            }
+            displayValue += number;
+            updateDisplay();
+        }
+
+        function appendOperator(operator) {
+            displayValue += operator;
+            updateDisplay();
+        }
+
+        function appendDecimal() {
+            if (!displayValue.includes('.')) {
+                displayValue += '.';
+                updateDisplay();
+            }
+        }
+
+        function clearDisplay() {
+            displayValue = '0';
+            updateDisplay();
+        }
+
+        function calculate() {
+            try {
+                displayValue = eval(displayValue);
+                updateDisplay();
+            } catch (error) {
+                displayValue = 'Error';
+                updateDisplay();
+            }
+        }
+
+        function appendPercentage() {
+            displayValue += '/100';
+            calculate();
+        }
+
+        function appendSqrt() {
+            displayValue = Math.sqrt(eval(displayValue));
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            displayValue = displayValue.slice(0, -1);
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>
