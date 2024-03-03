@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Walker Tribute Page</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            line-height: 180%;
+            color: #000;
+        }
+
+        /* HEADER STYLING */
+        #header {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background: #282828;
+        }
+
+        #header .title {
+            display: block;
+            font-size: 40px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            float: left;
+            color: #fff;
+        }
+
+        .title .tribute {
+            display: block;
+            font-size: 16px;
+            text-transform: none;
+        }
+
+        #header #navigation {
+            float: right;
+        }
+
+        #navigation ul li {
+            margin-right: 10px;
+        }
+
+        #navigation ul li:last-child {
+            margin-right: 0;
+        }
+
+        #navigation ul li a {
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: 'Ubuntu', sans-serif;
+            color: #fff;
+            padding-bottom: 10px;
+        }
+
+        #navigation ul li a:hover {
+            color: #005171;
+            text-decoration: underline;
+            transition: all ease-in 0.2s;
+        }
+
+        /* MAIN SECTION */
+
+        #main .caption {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #main p {
+            text-align: justify;
+        }
+
+        #personal-life {
+            color: #fff;
+            background: #e74c3c;
+        }
+
+        #personal-life img {
+            height: 282px;
+        }
+
+        /* CAREER SECTION */
+
+        #career,
+        #personal-life,
+        #intro,
+        #facts,
+        #death,
+        #filmography {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: #fff;
+        }
+
+        .section-title {
+            font-weight: bolder;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            border: 2px solid #fff;
+            margin-top: 10px;
+            width: 70px;
+        }
+
+        #intro {
+            padding-top: 40px;
+            background: #2c3e50;
+        }
+
+        #career {
+            background: #f39c12;
+        }
+
+        #death {
+            background: #d35400;
+        }
+
+        #death blockquote {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #death blockquote footer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #facts {
+            background: #16a085;
+        }
+
+        #filmography {
+            background: #34495e;
+        }
+
+        #main .fa {
+            font-size: 20px;
+        }
+
+        .thumbnail {
+            margin-bottom: 5px;
+        }
+
+        #filmography table,
+        th,
+        td,
+        tr {
+            border: 2px solid #fff;
+        }
+
+        #death a {
+            color: #282828;
+            font-weight: bold;
+        }
+
+        #death a:hover {
+            transition: ease-in 0.2s;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        th {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        tbody td:nth-child(2) {
+            font-weight: bold;
+            width: 200px;
+        }
+
+        tbody td:nth-child(3) {
+            text-align: center;
+        }
+
+        th,
+        td,
+        tr {
+            padding: 10px 15px;
+        }
+
+        .website {
+            padding-top: 30px;
+            font-size: 30px;
+        }
+
+        #footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: #282828;
+            color: #fff;
+        }
+
+        #footer p {
+            margin: 0;
+        }
+
+        #footer a {
+            color: #fff;
+        }
+
+        #footer a:hover {
+            text-decoration: underline;
+            transition: all linear 0.2s;
+        }
+
+        #footer .project {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-12">
+                    <div class="title">Paul Walker
+                        <span class="tribute">A Tribute Page</span>
+                    </div>
+
+                    <nav id="navigation">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="#career">CAREER</a></li>
+                            <li><a href="#personal-life">PERSONAL LIFE</a></li>
+                            <li><a href="#facts">FACTS</a></li>
+                            <li><a href="#filmography">FILMOGRAPHY</a></li>
+                            <li><a href="#death">DEATH</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">INTRO</div>
+                    <div class="col-md-4">
+                        <img src="http://www.aceshowbiz.com/images/wennpic/paul-walker-sao-paulo-fashion-week-2013-02.jpg" class="img-responsive thumbnail" alt="paul-walker" />
+                        <figcaption class="caption">Paul Walker</figcaption>
+                    </div>
+                    <div class="col-md-8">
+                        <p><strong>Paul William Walker IV</strong> (September 12, 1973 &#45; November 30, 2013) was an American actor. Walker began his career guest-starring in several television shows such as <strong>The Young and the Restless</strong> and <strong>Touched by an Angel</strong>. Walker gained prominence with breakout roles in <strong>Varsity Blues</strong> (1999) and <strong>She's All That</strong> (1999).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAREER SECTION -->
+        <div id="career">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">CAREER</div>
+                    <div class="col-md-6">
+                        <p>Walker gained international fame for his portrayal of <strong>Brian O'Conner</strong> in <strong>The Fast and the Furious</strong> street racing franchise. His other films include <strong>Eight Below</strong>, <strong>Into the Blue</strong>, <strong>Joy Ride</strong>, and <strong>Takers</strong>.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Walker died on November 30, 2013, at the age of 40 as a passenger in a single-car crash alongside friend and driver <strong>Roger Rodas</strong>. Walker's father and daughter filed separate wrongful death lawsuits against Porsche, which resulted in settlements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERSONAL LIFE SECTION -->
+        <div id="personal-life">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">PERSONAL LIFE</div>
+                    <div class="col-md-6">
+                        <p>Walker was known for his philanthropic efforts, including founding the disaster relief organization Reach Out Worldwide (ROWW) following the 2010 Haiti earthquake.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>He was often praised for his off-screen charitable work, and as a performer. Walker was also active in shark conservation efforts. He participated in the Billfish Foundation's annual fundraiser.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FACTS SECTION -->
+        <div id="facts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">FACTS</div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><i class="fa fa-check"></i> Walker was raised as a member of The Church of Jesus Christ of Latter-day Saints.</li>
+                            <li><i class="fa fa-check"></i> He had English and German ancestry.</li>
+                            <li><i class="fa fa-check"></i> He enjoyed surfing at the beach near his Santa Barbara home.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><i class="fa fa-check"></i> He attended Village Christian School in Sun Valley, California.</li>
+                            <li><i class="fa fa-check"></i> Walker was a keen traveler, and enjoyed exploring different cultures.</li>
+                            <li><i class="fa fa-check"></i> His favorite car was the Nissan Skyline GT-R R34.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILMOGRAPHY SECTION -->
+        <div id="filmography">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">FILMOGRAPHY</div>
+                    <div class="col-md-12">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Year</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>The Fast and the Furious</td>
+                                    <td>2001</td>
+                                    <td>Brian O'Conner</td>
+                                </tr>
+                                <tr>
+                                    <td>2 Fast 2 Furious</td>
+                                    <td>2003</td>
+                                    <td>Brian O'Conner</td>
+                                </tr>
+                                <tr>
+                                    <td>Fast & Furious</td>
+                                    <td>2009</td>
+                                    <td>Brian O'Conner</td>
+                                </tr>
+                                <tr>
+                                    <td>Fast Five</td>
+                                    <td>2011</td>
+                                    <td>Brian O'Conner</td>
+                                </tr>
+                                <tr>
+                                    <td>Fast & Furious 6</td>
+                                    <td>2013</td>
+                                    <td>Brian O'Conner</td>
+                                </tr>
+                                <tr>
+                                    <td>Furious 7</td>
+                                    <td>2015</td>
+                                    <td>Brian O'Conner</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEATH SECTION -->
+        <div id="death">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">DEATH</div>
+                    <div class="col-md-12">
+                        <blockquote>
+                            "If one day speed kills me, don't cry. Because I was smiling."
+                            <footer>- Paul Walker</footer>
+                        </blockquote>
+                        <p>Paul Walker died in a single-car crash on November 30, 2013, at the age of 40. The car he was riding in, a Porsche Carrera GT, crashed into a concrete lamppost and two trees on Hercules Street, in Santa Clarita, California. Walker and the driver, his friend Roger Rodas, were both pronounced dead at the scene of the accident.</p>
+                        <p>Walker's sudden death led to an outpouring of tributes from his fans and fellow celebrities. His contributions to the Fast & Furious franchise were honored, and his legacy continues to be celebrated by fans around the world.</p>
+                        <p>For more information, visit the official <a href="https://en.wikipedia.org/wiki/Paul_Walker" target="_blank">Wikipedia page</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+</body>
+
+</html>
